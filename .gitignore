@@ -1,0 +1,19 @@
+# Secrets and local environments
+.env
+.venv/
+
+# Caches and generated run state
+.cache/
+__pycache__/
+*.pyc
+node_modules/
+.arc/
+runs/
+output/
+tasks/
+test-results/
+playwright-report/
+template/frontend/dist/
+*.zip
+
+# bridge/dist/ is the only copy of the Pi engine bundle: keep it tracked.

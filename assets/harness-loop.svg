@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1130" height="940" viewBox="0 0 1130 940" role="img" aria-labelledby="title desc">
+  <title id="title">How arc_pi builds an app</title>
+  <desc id="desc">Build loop: requirements go to the agent, which writes one batch of code. A build check runs after every change; failures go back to the agent. A contract check follows, then the next batch. When all batches are done, the test and repair loop starts: tests are written and Playwright runs them in a real browser. Failures go to up to three repair rounds and are re-tested. When all tests pass or the rounds are used up, the best version ships.</desc>
+  <defs>
+    <marker id="a-black" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="a-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#dc2626" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="a-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#15803d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="a-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#ea580c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+
+  <rect width="1130" height="940" fill="#ffffff"/>
+
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" fill="#1f2937">
+    <text x="50" y="68" font-size="44" font-weight="700">How arc_pi builds an app</text>
+
+    <!-- Phase labels -->
+    <text x="545" y="120" font-size="18" font-weight="700" letter-spacing="1.5" text-anchor="middle">BUILD LOOP</text>
+    <path d="M50 132 H1040" stroke="#1f2937" stroke-width="2"/>
+    <text x="635" y="520" font-size="18" font-weight="700" letter-spacing="1.5" text-anchor="middle" fill="#15803d">TEST + REPAIR LOOP</text>
+    <path d="M230 532 H1040" stroke="#15803d" stroke-width="2"/>
+
+    <!-- Top row: build loop -->
+    <rect x="50" y="210" width="210" height="140" rx="16" fill="#ffffff" stroke="#9ca3af" stroke-width="3"/>
+    <rect x="310" y="210" width="210" height="140" rx="16" fill="#1f2937" stroke="#1f2937" stroke-width="3"/>
+    <rect x="570" y="210" width="210" height="140" rx="16" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+    <rect x="830" y="210" width="210" height="140" rx="16" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+
+    <!-- Bottom row: test + repair loop -->
+    <rect x="50" y="560" width="210" height="140" rx="16" fill="#f0fdf4" stroke="#15803d" stroke-width="3"/>
+    <rect x="310" y="560" width="210" height="140" rx="16" fill="#f0fdf4" stroke="#15803d" stroke-width="3"/>
+    <rect x="830" y="560" width="210" height="140" rx="16" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+    <rect x="310" y="780" width="210" height="120" rx="16" fill="#fef2f2" stroke="#dc2626" stroke-width="3"/>
+
+    <g text-anchor="middle">
+      <g font-size="26" font-weight="700">
+        <text x="155" y="275">Requirements</text>
+        <text x="415" y="275" fill="#ffffff">Agent</text>
+        <text x="675" y="275">Build check</text>
+        <text x="935" y="275">Contract</text>
+        <text x="155" y="625">Write tests</text>
+        <text x="415" y="625">Playwright</text>
+        <text x="935" y="625">Finished app</text>
+        <text x="415" y="835">Repair</text>
+      </g>
+      <g font-size="18" fill="#6b7280">
+        <text x="155" y="311">GIVEN·WHEN·THEN</text>
+        <text x="415" y="311" fill="#d1d5db">writes one batch</text>
+        <text x="675" y="311">every change</text>
+        <text x="935" y="311">names + seed data</text>
+        <text x="155" y="661">per requirement</text>
+        <text x="415" y="661">real browser</text>
+        <text x="935" y="661">best version</text>
+        <text x="415" y="871">up to 3 rounds</text>
+      </g>
+
+      <!-- Arrow labels -->
+      <text x="675" y="166" font-size="19" font-weight="700">next batch</text>
+      <text x="545" y="430" font-size="19" font-weight="700" fill="#dc2626">fails → fix</text>
+      <text x="935" y="458" font-size="17" fill="#6b7280">all done</text>
+      <text x="675" y="616" font-size="19" font-weight="700" fill="#ea580c">all pass</text>
+    </g>
+    <text x="373" y="747" font-size="18" font-weight="700" fill="#dc2626" text-anchor="end">fails</text>
+    <text x="457" y="747" font-size="18" font-weight="700" fill="#15803d">re-test</text>
+  </g>
+
+  <!-- Arrows -->
+  <g fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M264 280 H302" stroke="#1f2937" marker-end="url(#a-black)"/>
+    <path d="M524 280 H562" stroke="#1f2937" marker-end="url(#a-black)"/>
+    <path d="M784 280 H822" stroke="#1f2937" marker-end="url(#a-black)"/>
+    <path d="M935 206 V196 Q935 180 919 180 H431 Q415 180 415 196 V202" stroke="#1f2937" marker-end="url(#a-black)"/>
+    <path d="M675 354 V384 Q675 400 659 400 H431 Q415 400 415 384 V358" stroke="#dc2626" stroke-dasharray="8 7" marker-end="url(#a-red)"/>
+
+    <path d="M1044 280 H1064 Q1080 280 1080 296 V454 Q1080 470 1064 470 H171 Q155 470 155 486 V552" stroke="#1f2937" stroke-dasharray="8 7" marker-end="url(#a-black)"/>
+
+    <path d="M264 630 H302" stroke="#15803d" marker-end="url(#a-green)"/>
+    <path d="M524 630 H822" stroke="#ea580c" marker-end="url(#a-orange)"/>
+    <path d="M385 704 V772" stroke="#dc2626" marker-end="url(#a-red)"/>
+    <path d="M445 776 V708" stroke="#15803d" marker-end="url(#a-green)"/>
+  </g>
+</svg>

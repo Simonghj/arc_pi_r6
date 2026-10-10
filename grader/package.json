@@ -1,0 +1,7 @@
+{
+  "name": "arc-pi-python-grader",
+  "private": true,
+  "dependencies": {
+    "@playwright/test": "1.57.0"
+  }
+}
