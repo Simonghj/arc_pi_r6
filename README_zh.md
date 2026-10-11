@@ -4,6 +4,8 @@
 
 [English](README.md) · **简体中文**
 
+## Limitless 团队 · 2026 OAIC Agentic Software Factory 黑客松决赛项目
+
 ### 输入需求树，输出全栈 Web 应用。
 
 **用 GIVEN/WHEN/THEN 场景写下应用要做什么。编码智能体负责实现，在真实浏览器中测试，并自动修复。**

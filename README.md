@@ -4,6 +4,8 @@
 
 **English** · [简体中文](README_zh.md)
 
+## Team Limitless' project for the 2026 OAIC Agentic Software Factory Hackathon finals
+
 ### Requirement tree in, full-stack web app out.
 
 **Write what the app must do as GIVEN/WHEN/THEN scenarios. A coding agent builds it, tests it in a real browser,
