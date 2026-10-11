@@ -71,7 +71,8 @@ python -m arc_pi.cli doctor
 
 ### 3. 配置
 
-在项目根目录创建 `.env`（已被 git 忽略），粘贴以下内容：
+把 `.env.example` 复制为 `.env`（Windows：`copy .env.example .env`；Linux / macOS：`cp .env.example .env`），
+然后填入密钥。`.env` 已被 git 忽略。也可以自己创建 `.env` 并粘贴以下内容：
 
 ```dotenv
 # 你的模型接口（任意兼容 OpenAI 的 /chat/completions API）

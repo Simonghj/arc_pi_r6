@@ -74,7 +74,8 @@ python -m arc_pi.cli doctor
 
 ### 3. Configure
 
-Create `.env` in the project root (it is git-ignored) and paste:
+Copy `.env.example` to `.env` (`copy .env.example .env` on Windows, `cp .env.example .env` on Linux / macOS) and
+fill in your key. `.env` is git-ignored. Or create `.env` yourself and paste:
 
 ```dotenv
 # Your model endpoint (any OpenAI-compatible /chat/completions API)
